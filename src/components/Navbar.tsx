@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Top App Bar */}
-      <header className="fixed top-0 left-0 right-0 z-10 bg-wine-DEFAULT h-16 text-white shadow-md max-w-lg mx-auto">
+      <header className="fixed top-0 left-0 right-0 z-10 bg-white h-16 text-wine-DEFAULT shadow-md max-w-lg mx-auto">
         <div className="h-full px-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Wine size={24} />
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <Link 
                     to="/category/red" 
-                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
                     Red Wines
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <Link 
                     to="/category/white" 
-                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
                     White Wines
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <Link 
                     to="/category/rose" 
-                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
                     Rosé Wines
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <Link 
                     to="/category/champagne" 
-                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
                     Champagne & Sparkling
@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <Link 
                     to="/about" 
-                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
                     About Us
