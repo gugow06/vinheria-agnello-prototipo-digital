@@ -1,12 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Search, ShoppingCart, Wine } from "lucide-react";
+import { Home, Search, ShoppingCart, Wine, Menu, X } from "lucide-react";
 import { useCart } from "../contexts/CartContext";
 
 const Navbar: React.FC = () => {
   const { getTotalItems } = useCart();
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <>
@@ -17,10 +22,79 @@ const Navbar: React.FC = () => {
             <Wine size={24} />
             <h1 className="text-xl font-semibold">Vino Cartopia</h1>
           </div>
-          <Link to="/search" className="p-2">
-            <Search size={22} />
-          </Link>
+          <div className="flex items-center">
+            <Link to="/search" className="p-2 mr-2">
+              <Search size={22} />
+            </Link>
+            <button 
+              onClick={toggleMenu} 
+              className="p-2"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
+        
+        {/* Wine Categories Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-16 left-0 right-0 bg-white shadow-md z-20 max-w-lg mx-auto">
+            <div className="p-4">
+              <h2 className="font-semibold text-wine-DEFAULT mb-2">Wine Types</h2>
+              <ul className="space-y-2 mb-4">
+                <li>
+                  <Link 
+                    to="/category/red" 
+                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    onClick={toggleMenu}
+                  >
+                    Red Wines
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/category/white" 
+                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    onClick={toggleMenu}
+                  >
+                    White Wines
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/category/rose" 
+                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    onClick={toggleMenu}
+                  >
+                    Rosé Wines
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/category/champagne" 
+                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    onClick={toggleMenu}
+                  >
+                    Champagne & Sparkling
+                  </Link>
+                </li>
+              </ul>
+              
+              <h2 className="font-semibold text-wine-DEFAULT mb-2">About</h2>
+              <ul className="space-y-2">
+                <li>
+                  <Link 
+                    to="/about" 
+                    className="block p-2 hover:bg-gray-100 rounded-md"
+                    onClick={toggleMenu}
+                  >
+                    About Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
       </header>
       
       {/* Bottom Navigation */}
