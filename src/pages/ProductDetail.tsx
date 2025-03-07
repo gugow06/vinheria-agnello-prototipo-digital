@@ -1,8 +1,8 @@
 
-import React, { useState } from "react";
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { wines } from "../data/wines";
-import { ArrowLeft, Minus, Plus, ShoppingCart } from "lucide-react";
+import { ArrowLeft, ShoppingCart } from "lucide-react";
 import { useCart } from "../contexts/CartContext";
 import Navbar from "../components/Navbar";
 
@@ -10,8 +10,6 @@ const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { addToCart } = useCart();
-  
-  const [quantity, setQuantity] = useState<number>(1);
   
   const wine = wines.find(wine => wine.id === Number(id));
   
@@ -30,19 +28,7 @@ const ProductDetail: React.FC = () => {
   }
 
   const handleAddToCart = () => {
-    addToCart(wine, quantity);
-    // Optionally navigate to cart
-    // navigate("/cart");
-  };
-
-  const decreaseQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  const increaseQuantity = () => {
-    setQuantity(quantity + 1);
+    addToCart(wine, 1);
   };
 
   return (
@@ -99,37 +85,15 @@ const ProductDetail: React.FC = () => {
           </div>
         </div>
         
-        {/* Quantity and Add to Cart */}
+        {/* Add to Cart */}
         <div className="fixed bottom-20 left-0 right-0 max-w-lg mx-auto bg-white p-4 border-t">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center border rounded">
-              <button
-                onClick={decreaseQuantity}
-                className="px-3 py-2 text-gray-500 hover:text-wine-DEFAULT transition-colors"
-                aria-label="Decrease quantity"
-              >
-                <Minus size={18} />
-              </button>
-              
-              <span className="px-3 min-w-[40px] text-center">{quantity}</span>
-              
-              <button
-                onClick={increaseQuantity}
-                className="px-3 py-2 text-gray-500 hover:text-wine-DEFAULT transition-colors"
-                aria-label="Increase quantity"
-              >
-                <Plus size={18} />
-              </button>
-            </div>
-            
-            <button
-              onClick={handleAddToCart}
-              className="flex items-center bg-wine-DEFAULT text-white px-6 py-3 rounded-md hover:bg-wine-dark transition-colors"
-            >
-              <ShoppingCart size={18} className="mr-2" />
-              Add to Cart
-            </button>
-          </div>
+          <button
+            onClick={handleAddToCart}
+            className="w-full flex items-center justify-center bg-wine-DEFAULT text-white px-6 py-3 rounded-md hover:bg-wine-dark transition-colors"
+          >
+            <ShoppingCart size={18} className="mr-2" />
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>

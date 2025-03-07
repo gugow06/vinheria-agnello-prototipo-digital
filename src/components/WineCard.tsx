@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Wine } from "../data/wines";
-import { ShoppingCart } from "lucide-react";
+import { Plus } from "lucide-react";
 import { useCart } from "../contexts/CartContext";
 
 interface WineCardProps {
@@ -41,7 +41,7 @@ const WineCard: React.FC<WineCardProps> = ({ wine }) => {
               className="p-2 bg-wine-DEFAULT text-white rounded-full hover:bg-wine-dark transition-colors"
               aria-label="Add to cart"
             >
-              <ShoppingCart size={18} />
+              <Plus size={18} />
             </button>
           </div>
         </div>
