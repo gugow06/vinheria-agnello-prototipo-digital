@@ -3,6 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Gotham Font */
+@font-face {
+  font-family: 'Gotham';
+  src: url('https://db.onlinewebfonts.com/t/3a47f5f06b7994e5fc0442bada92a582.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('https://db.onlinewebfonts.com/t/9a4f9f11a5091d436dcdf13c8d763c19.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -91,11 +108,11 @@
 
   body {
     @apply bg-wine-background text-foreground;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Gotham', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-sans;
   }
 }
 
