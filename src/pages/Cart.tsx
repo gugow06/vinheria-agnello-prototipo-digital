@@ -68,7 +68,7 @@ const Cart: React.FC = () => {
             <div className="flex flex-col gap-3">
               <button
                 onClick={handleCheckout}
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-wine-DEFAULT text-white rounded-md hover:bg-wine-dark transition-colors"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors font-semibold"
               >
                 <CreditCard size={18} />
                 Proceed to Checkout
