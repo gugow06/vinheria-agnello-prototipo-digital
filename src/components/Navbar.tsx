@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Top App Bar */}
-      <header className="fixed top-0 left-0 right-0 z-10 bg-white h-16 text-wine-DEFAULT shadow-md max-w-lg mx-auto">
-        <div className="h-full px-4 flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-10 bg-white h-16 text-wine-DEFAULT shadow-md">
+        <div className="h-full px-4 flex items-center justify-between max-w-lg mx-auto">
           <div className="flex items-center gap-2">
             <Wine size={24} />
             <h1 className="text-xl font-semibold">Vino Cartopia</h1>
@@ -38,8 +38,8 @@ const Navbar: React.FC = () => {
         
         {/* Wine Categories Menu */}
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-white shadow-md z-20 max-w-lg mx-auto">
-            <div className="p-4">
+          <div className="absolute top-16 left-0 right-0 bg-white shadow-md z-20">
+            <div className="p-4 max-w-lg mx-auto">
               <h2 className="font-semibold text-wine-DEFAULT mb-2">Wine Types</h2>
               <ul className="space-y-2 mb-4">
                 <li>
@@ -98,8 +98,8 @@ const Navbar: React.FC = () => {
       </header>
       
       {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 z-10 bg-white bottom-nav max-w-lg mx-auto">
-        <div className="flex justify-around py-3">
+      <nav className="fixed bottom-0 left-0 right-0 z-10 bg-white bottom-nav">
+        <div className="flex justify-around py-3 max-w-lg mx-auto">
           <Link 
             to="/" 
             className={`flex flex-col items-center ${

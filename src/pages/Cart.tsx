@@ -4,17 +4,21 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartContext";
 import CartItem from "../components/CartItem";
 import Navbar from "../components/Navbar";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, CreditCard } from "lucide-react";
+import { toast } from "sonner";
 
 const Cart: React.FC = () => {
   const { cartItems, getTotalPrice, clearCart } = useCart();
   const navigate = useNavigate();
   
   const handleCheckout = () => {
-    // In a real app, we would navigate to a checkout page
-    alert("Checkout functionality would be implemented here!");
-    // clearCart();
-    // navigate("/");
+    // In a real app, we would redirect to Stripe payment page
+    toast.success("Redirecting to payment page...");
+    setTimeout(() => {
+      toast("This would redirect to Stripe in a production environment");
+      // In a real implementation, we would:
+      // window.location.href = stripeCheckoutUrl;
+    }, 1500);
   };
 
   return (
@@ -61,18 +65,20 @@ const Cart: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex gap-4 mb-4">
-              <button
-                onClick={clearCart}
-                className="px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors flex-1"
-              >
-                Clear Cart
-              </button>
+            <div className="flex flex-col gap-3">
               <button
                 onClick={handleCheckout}
-                className="px-6 py-3 bg-wine-DEFAULT text-white rounded-md hover:bg-wine-dark transition-colors flex-1"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-wine-DEFAULT text-white rounded-md hover:bg-wine-dark transition-colors"
               >
-                Checkout
+                <CreditCard size={18} />
+                Proceed to Checkout
+              </button>
+              
+              <button
+                onClick={clearCart}
+                className="px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+              >
+                Clear Cart
               </button>
             </div>
           </>
