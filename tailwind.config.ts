@@ -73,6 +73,26 @@ export default {
 					light: '#A44E5A',
 					accent: '#E3CAA5',
 					background: '#FFFBF5'
+				},
+				redwine: {
+					DEFAULT: '#5E0B15', // Deep burgundy red
+					light: '#85242F',
+					dark: '#3C0911'
+				},
+				whitewine: {
+					DEFAULT: '#F8E8A7', // Pale gold
+					light: '#FFFBD0',
+					dark: '#D5C978'
+				},
+				rosewine: {
+					DEFAULT: '#F7CFD3', // Rose pink
+					light: '#FDEAEC',
+					dark: '#E5A4AA'
+				},
+				champagne: {
+					DEFAULT: '#E8D9A8', // Bubbly gold
+					light: '#F4EBCE',
+					dark: '#C9B77E'
 				}
 			},
 			borderRadius: {

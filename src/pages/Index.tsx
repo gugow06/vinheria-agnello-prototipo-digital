@@ -25,7 +25,7 @@ const Index: React.FC = () => {
             alt="Wine Banner" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div className="absolute inset-0 bg-wine-dark bg-opacity-60 flex items-center justify-center">
             <div className="text-center px-4">
               <h1 className="text-3xl font-bold text-white mb-2">Vino Cartopia</h1>
               <p className="text-wine-accent text-sm">Discover exceptional wines from around the world</p>
@@ -35,23 +35,35 @@ const Index: React.FC = () => {
         
         {/* Wine Type Buttons */}
         <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">Explore Wines</h2>
+          <h2 className="text-xl font-semibold mb-4 text-wine-DEFAULT">Explore Wines</h2>
           <div className="grid grid-cols-2 gap-3">
-            <Link to="/category/red" className="bg-wine-DEFAULT/10 rounded-lg p-4 flex flex-col items-center hover:bg-wine-DEFAULT/20 transition-colors">
-              <Grape size={24} className="text-wine-DEFAULT mb-2" />
-              <span className="font-medium text-wine-DEFAULT">Red Wines</span>
+            <Link 
+              to="/category/red" 
+              className="bg-red-wine-gradient rounded-lg p-4 flex flex-col items-center hover:shadow-md transition-all duration-300 transform hover:scale-[1.02]"
+            >
+              <Grape size={24} className="text-white mb-2" />
+              <span className="font-medium text-white">Red Wines</span>
             </Link>
-            <Link to="/category/white" className="bg-wine-DEFAULT/10 rounded-lg p-4 flex flex-col items-center hover:bg-wine-DEFAULT/20 transition-colors">
-              <GlassWater size={24} className="text-wine-DEFAULT mb-2" />
-              <span className="font-medium text-wine-DEFAULT">White Wines</span>
+            <Link 
+              to="/category/white" 
+              className="bg-white-wine-gradient rounded-lg p-4 flex flex-col items-center hover:shadow-md transition-all duration-300 transform hover:scale-[1.02]"
+            >
+              <GlassWater size={24} className="text-redwine-DEFAULT mb-2" />
+              <span className="font-medium text-redwine-DEFAULT">White Wines</span>
             </Link>
-            <Link to="/category/rose" className="bg-wine-DEFAULT/10 rounded-lg p-4 flex flex-col items-center hover:bg-wine-DEFAULT/20 transition-colors">
-              <Wine size={24} className="text-wine-DEFAULT mb-2" />
-              <span className="font-medium text-wine-DEFAULT">Rosé Wines</span>
+            <Link 
+              to="/category/rose" 
+              className="bg-rose-wine-gradient rounded-lg p-4 flex flex-col items-center hover:shadow-md transition-all duration-300 transform hover:scale-[1.02]"
+            >
+              <Wine size={24} className="text-redwine-DEFAULT mb-2" />
+              <span className="font-medium text-redwine-DEFAULT">Rosé Wines</span>
             </Link>
-            <Link to="/category/champagne" className="bg-wine-DEFAULT/10 rounded-lg p-4 flex flex-col items-center hover:bg-wine-DEFAULT/20 transition-colors">
-              <Sparkles size={24} className="text-wine-DEFAULT mb-2" />
-              <span className="font-medium text-wine-DEFAULT">Champagne</span>
+            <Link 
+              to="/category/champagne" 
+              className="bg-champagne-gradient rounded-lg p-4 flex flex-col items-center hover:shadow-md transition-all duration-300 transform hover:scale-[1.02]"
+            >
+              <Sparkles size={24} className="text-redwine-DEFAULT mb-2" />
+              <span className="font-medium text-redwine-DEFAULT">Champagne</span>
             </Link>
           </div>
         </div>
@@ -59,7 +71,7 @@ const Index: React.FC = () => {
         {/* Featured Wines */}
         <section className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Featured Wines</h2>
+            <h2 className="text-xl font-semibold text-wine-DEFAULT">Featured Wines</h2>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {wines.slice(0, 4).map(wine => (
@@ -71,7 +83,7 @@ const Index: React.FC = () => {
         {/* Red Wines */}
         <section className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Red Wines</h2>
+            <h2 className="text-xl font-semibold text-redwine-DEFAULT">Red Wines</h2>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {redWines.slice(0, 2).map(wine => (
@@ -83,7 +95,7 @@ const Index: React.FC = () => {
         {/* White Wines */}
         <section className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">White Wines</h2>
+            <h2 className="text-xl font-semibold text-whitewine-dark">White Wines</h2>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {whiteWines.slice(0, 2).map(wine => (
@@ -95,7 +107,7 @@ const Index: React.FC = () => {
         {/* Champagne Section */}
         <section className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Champagne & Sparkling</h2>
+            <h2 className="text-xl font-semibold text-champagne-dark">Champagne & Sparkling</h2>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {champagnes.slice(0, 2).map(wine => (
@@ -105,9 +117,9 @@ const Index: React.FC = () => {
         </section>
 
         {/* About Section */}
-        <section className="mb-8 bg-wine-accent/20 p-4 rounded-lg">
+        <section className="mb-8 bg-wine-accent/20 p-4 rounded-lg border border-wine-accent/30">
           <div className="flex items-center justify-between mb-2">
-            <h2 className="text-xl font-semibold flex items-center">
+            <h2 className="text-xl font-semibold flex items-center text-wine-DEFAULT">
               <Wine size={20} className="mr-2 text-wine-DEFAULT" />
               About Vino Cartopia
             </h2>
