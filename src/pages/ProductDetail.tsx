@@ -35,17 +35,17 @@ const ProductDetail: React.FC = () => {
   const getWineTypeColor = () => {
     switch (wine.type.toLowerCase()) {
       case "red wine":
-        return "bg-redwine-DEFAULT hover:bg-redwine-dark";
+        return "bg-redwine-dark";
       case "white wine":
-        return "bg-whitewine-DEFAULT hover:bg-whitewine-dark text-gray-800";
+        return "bg-whitewine-dark text-gray-800";
       case "rosé":
       case "rose":
-        return "bg-rosewine-DEFAULT hover:bg-rosewine-dark text-gray-800";
+        return "bg-rosewine-dark text-gray-800";
       case "champagne":
       case "sparkling":
-        return "bg-champagne-DEFAULT hover:bg-champagne-dark text-gray-800";
+        return "bg-champagne-dark text-gray-800";
       default:
-        return "bg-wine-DEFAULT hover:bg-wine-dark";
+        return "bg-wine-dark";
     }
   };
 
@@ -109,7 +109,7 @@ const ProductDetail: React.FC = () => {
         <div className="fixed bottom-20 left-0 right-0 max-w-lg mx-auto bg-white p-4 border-t">
           <button
             onClick={handleAddToCart}
-            className={`w-full flex items-center justify-center ${buttonColorClass} text-white px-6 py-3 rounded-md transition-colors`}
+            className={`w-full flex items-center justify-center ${buttonColorClass} text-white px-6 py-3 rounded-md`}
           >
             <ShoppingCart size={18} className="mr-2" />
             Add to Cart

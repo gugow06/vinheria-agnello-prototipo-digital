@@ -38,7 +38,7 @@ const WineCard: React.FC<WineCardProps> = ({ wine }) => {
             <span className="text-wine-DEFAULT font-bold">${wine.price.toFixed(2)}</span>
             <button
               onClick={handleAddToCart}
-              className="p-2 bg-wine-DEFAULT text-white rounded-full transition-colors hover:bg-wine-dark"
+              className="p-2 bg-wine-DEFAULT text-white rounded-full"
               aria-label="Add to cart"
             >
               <Plus size={18} />
