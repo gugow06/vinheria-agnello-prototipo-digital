@@ -17,22 +17,22 @@ const Index: React.FC = () => {
     <div className="mobile-container">
       <Navbar />
       
-      <div className="px-4 py-6">
-        {/* Hero Banner Section */}
-        <div className="relative h-64 rounded-lg overflow-hidden mb-6">
-          <img 
-            src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
-            alt="Wine Hero" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="text-center px-4">
-              <h1 className="text-3xl font-bold text-white mb-2">Agnello</h1>
-              <p className="text-wine-accent text-sm">Descubra vinhos excepcionais de todo o mundo</p>
-            </div>
+      {/* Hero Banner Section - Full width without margins */}
+      <div className="relative h-64 w-full overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
+          alt="Wine Hero" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="text-center px-4">
+            <h1 className="text-3xl font-bold text-white mb-2">Agnello</h1>
+            <p className="text-wine-accent text-sm">Descubra vinhos excepcionais de todo o mundo</p>
           </div>
         </div>
-        
+      </div>
+      
+      <div className="px-4 py-6">
         {/* Wine Type Buttons */}
         <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4 text-wine-DEFAULT">Explore Vinhos</h2>
