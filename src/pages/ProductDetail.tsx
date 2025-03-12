@@ -55,7 +55,7 @@ const ProductDetail: React.FC = () => {
     <div className="mobile-container">
       <Navbar />
       
-      <div className="px-4 py-6">
+      <div className="px-4 py-6 pb-28"> {/* Added pb-28 to ensure content doesn't get hidden behind the fixed button */}
         {/* Back button */}
         <button 
           onClick={() => navigate(-1)} 
@@ -105,8 +105,8 @@ const ProductDetail: React.FC = () => {
           </div>
         </div>
         
-        {/* Add to Cart */}
-        <div className="fixed bottom-20 left-0 right-0 max-w-lg mx-auto bg-white p-4 border-t">
+        {/* Add to Cart - Button positioned at the fixed bottom with proper spacing */}
+        <div className="fixed bottom-0 left-0 right-0 max-w-lg mx-auto bg-white p-4 border-t shadow-lg">
           <button
             onClick={handleAddToCart}
             className={`w-full flex items-center justify-center ${buttonColorClass} text-white px-6 py-3 rounded-md`}
