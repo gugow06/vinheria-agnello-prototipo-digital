@@ -138,7 +138,7 @@ const Navbar: React.FC = () => {
       </nav>
       
       {/* Content padding for fixed nav */}
-      <div className="pb-16 pt-16"></div>
+      <div className="pt-16"></div>
     </>
   );
 };
