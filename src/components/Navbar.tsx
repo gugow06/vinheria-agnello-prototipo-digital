@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
         <div className="h-full px-4 flex items-center justify-between max-w-[480px] mx-auto">
           <div className="flex items-center gap-2">
             <Wine size={24} />
-            <h1 className="text-xl font-semibold">Vino Cartopia</h1>
+            <h1 className="text-xl font-semibold">Agnello</h1>
           </div>
           <div className="flex items-center">
             <Link to="/search" className="p-2 mr-2">
