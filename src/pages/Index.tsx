@@ -125,9 +125,11 @@ const Index: React.FC = () => {
               </h2>
             </div>
             <p className="text-sm text-gray-700">
-              Selecionamos os melhores vinhos de vinícolas renomadas de todo o mundo. 
-              Seja você um conhecedor de vinhos ou apenas iniciando sua jornada, 
-              temos a garrafa perfeita para cada paladar e ocasião.
+              A Agnello é uma vinícola tradicional dedicada à produção de vinhos excepcionais. 
+              Nossos vinhedos são cultivados com dedicação e conhecimento passado por gerações, 
+              resultando em vinhos de caráter único e sabor inconfundível. Desde o plantio das uvas 
+              até o engarrafamento, cada etapa é cuidadosamente supervisionada para garantir a 
+              mais alta qualidade em cada garrafa que produzimos.
             </p>
           </section>
         </div>
