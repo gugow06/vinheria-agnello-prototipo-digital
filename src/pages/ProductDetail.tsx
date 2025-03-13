@@ -52,7 +52,7 @@ const ProductDetail: React.FC = () => {
   const buttonColorClass = getWineTypeColor();
 
   return (
-    <div className="mobile-container pb-20">
+    <div className="mobile-container pb-20 overflow-y-auto h-screen">
       <Navbar />
       
       <div className="px-4 py-6">
