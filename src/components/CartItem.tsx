@@ -39,14 +39,14 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
           {item.name}
         </Link>
         <p className="text-sm text-gray-600">{item.type}</p>
-        <p className="text-wine-DEFAULT font-bold">${item.price.toFixed(2)}</p>
+        <p className="text-wine-DEFAULT font-bold">R${item.price.toFixed(2)}</p>
       </div>
       
       <div className="flex flex-col items-end gap-2">
         <button
           onClick={() => removeFromCart(item.id)}
           className="text-gray-400 hover:text-red-500 transition-colors"
-          aria-label="Remove item"
+          aria-label="Remover item"
         >
           <Trash2 size={18} />
         </button>
@@ -55,7 +55,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
           <button
             onClick={handleDecrease}
             className="px-2 py-1 text-gray-500 hover:text-wine-DEFAULT transition-colors"
-            aria-label="Decrease quantity"
+            aria-label="Diminuir quantidade"
           >
             <Minus size={16} />
           </button>
@@ -65,7 +65,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
           <button
             onClick={handleIncrease}
             className="px-2 py-1 text-gray-500 hover:text-wine-DEFAULT transition-colors"
-            aria-label="Increase quantity"
+            aria-label="Aumentar quantidade"
           >
             <Plus size={16} />
           </button>

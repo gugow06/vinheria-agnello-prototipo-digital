@@ -30,7 +30,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const parsedCart = JSON.parse(storedCart);
         setCartItems(parsedCart);
       } catch (e) {
-        console.error("Error parsing stored cart:", e);
+        console.error("Erro ao analisar carrinho armazenado:", e);
       }
     }
   }, []);
@@ -45,14 +45,14 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const existingItem = prevItems.find((item) => item.id === wine.id);
       
       if (existingItem) {
-        toast(`Added ${quantity} more ${wine.name} to cart`);
+        toast(`Adicionado mais ${quantity} ${wine.name} ao carrinho`);
         return prevItems.map((item) =>
           item.id === wine.id
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       } else {
-        toast(`Added ${wine.name} to cart`);
+        toast(`${wine.name} adicionado ao carrinho`);
         return [...prevItems, { ...wine, quantity }];
       }
     });
@@ -62,7 +62,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setCartItems((prevItems) => {
       const item = prevItems.find(item => item.id === id);
       if (item) {
-        toast(`Removed ${item.name} from cart`);
+        toast(`${item.name} removido do carrinho`);
       }
       return prevItems.filter((item) => item.id !== id);
     });
@@ -83,7 +83,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const clearCart = () => {
     setCartItems([]);
-    toast("Cart cleared");
+    toast("Carrinho limpo");
   };
 
   const getTotalItems = () => {
@@ -117,7 +117,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 export const useCart = () => {
   const context = useContext(CartContext);
   if (context === undefined) {
-    throw new Error("useCart must be used within a CartProvider");
+    throw new Error("useCart deve ser usado dentro de um CartProvider");
   }
   return context;
 };

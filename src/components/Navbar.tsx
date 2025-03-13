@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
             <button 
               onClick={toggleMenu} 
               className="p-2"
-              aria-label="Toggle menu"
+              aria-label="Alternar menu"
             >
               {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 right-0 bg-white shadow-md z-20">
             <div className="p-4 max-w-[480px] mx-auto">
-              <h2 className="font-semibold text-wine-DEFAULT mb-2">Wine Types</h2>
+              <h2 className="font-semibold text-wine-DEFAULT mb-2">Tipos de Vinho</h2>
               <ul className="space-y-2 mb-4">
                 <li>
                   <Link 
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
                     className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
-                    Red Wines
+                    Vinhos Tintos
                   </Link>
                 </li>
                 <li>
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                     className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
-                    White Wines
+                    Vinhos Brancos
                   </Link>
                 </li>
                 <li>
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
                     className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
-                    Rosé Wines
+                    Vinhos Rosé
                   </Link>
                 </li>
                 <li>
@@ -75,12 +75,12 @@ const Navbar: React.FC = () => {
                     className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
-                    Champagne & Sparkling
+                    Champagne & Espumantes
                   </Link>
                 </li>
               </ul>
               
-              <h2 className="font-semibold text-wine-DEFAULT mb-2">About</h2>
+              <h2 className="font-semibold text-wine-DEFAULT mb-2">Sobre</h2>
               <ul className="space-y-2">
                 <li>
                   <Link 
@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
                     className="block p-2 hover:bg-gray-100 rounded-md text-wine-DEFAULT"
                     onClick={toggleMenu}
                   >
-                    About Us
+                    Sobre Nós
                   </Link>
                 </li>
               </ul>
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
             }`}
           >
             <Home size={22} />
-            <span className="text-xs mt-1">Home</span>
+            <span className="text-xs mt-1">Início</span>
           </Link>
           
           <Link 
@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
             }`}
           >
             <Search size={22} />
-            <span className="text-xs mt-1">Search</span>
+            <span className="text-xs mt-1">Buscar</span>
           </Link>
           
           <Link 
@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
                 {getTotalItems()}
               </span>
             )}
-            <span className="text-xs mt-1">Cart</span>
+            <span className="text-xs mt-1">Carrinho</span>
           </Link>
         </div>
       </nav>

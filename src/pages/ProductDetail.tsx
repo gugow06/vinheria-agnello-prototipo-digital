@@ -16,12 +16,12 @@ const ProductDetail: React.FC = () => {
   if (!wine) {
     return (
       <div className="mobile-container p-4 flex flex-col items-center justify-center h-screen">
-        <h2 className="text-xl font-semibold mb-4">Product Not Found</h2>
+        <h2 className="text-xl font-semibold mb-4">Produto Não Encontrado</h2>
         <button 
           onClick={() => navigate("/")}
           className="px-4 py-2 bg-wine-DEFAULT text-white rounded-md"
         >
-          Return to Home
+          Voltar para Início
         </button>
       </div>
     );
@@ -62,7 +62,7 @@ const ProductDetail: React.FC = () => {
           className="flex items-center text-gray-600 mb-4"
         >
           <ArrowLeft size={18} className="mr-1" />
-          <span>Back</span>
+          <span>Voltar</span>
         </button>
         
         {/* Product Image */}
@@ -85,16 +85,16 @@ const ProductDetail: React.FC = () => {
           
           <div className="flex justify-between items-center mb-4">
             <p className="text-gray-600">{wine.type}</p>
-            <p className="text-wine-DEFAULT text-xl font-bold">${wine.price.toFixed(2)}</p>
+            <p className="text-wine-DEFAULT text-xl font-bold">R${wine.price.toFixed(2)}</p>
           </div>
           
           <div className="bg-gray-50 p-3 rounded-md mb-4">
             <div className="flex justify-between mb-2">
-              <span className="text-sm text-gray-500">Origin</span>
+              <span className="text-sm text-gray-500">Origem</span>
               <span className="text-sm font-medium">{wine.origin}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-sm text-gray-500">Year</span>
+              <span className="text-sm text-gray-500">Ano</span>
               <span className="text-sm font-medium">{wine.year}</span>
             </div>
           </div>
@@ -105,11 +105,11 @@ const ProductDetail: React.FC = () => {
             className={`w-full flex items-center justify-center ${buttonColorClass} text-white px-6 py-3 rounded-md mb-6`}
           >
             <ShoppingCart size={18} className="mr-2" />
-            Add to Cart
+            Adicionar ao Carrinho
           </button>
           
           <div>
-            <h2 className="text-lg font-medium mb-2">Description</h2>
+            <h2 className="text-lg font-medium mb-2">Descrição</h2>
             <p className="text-gray-700">{wine.description}</p>
           </div>
         </div>
