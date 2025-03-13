@@ -1,3 +1,4 @@
+
 import React from "react";
 import { wines } from "../data/wines";
 import WineCard from "../components/WineCard";
@@ -19,8 +20,8 @@ const Index: React.FC = () => {
         {/* Hero Banner Section - Full width without margins */}
         <div className="relative h-64 w-full overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
-            alt="Wine Hero" 
+            src="/lovable-uploads/4b680abd-57bd-4b07-b5d6-4d9a9e8b0b63.png" 
+            alt="Wine Banner" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
