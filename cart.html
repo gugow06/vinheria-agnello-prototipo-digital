@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras - Agnello</title>
+  <meta name="description" content="Seu carrinho de compras Agnello">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="mobile-container">
+    <!-- Header/Navbar -->
+    <header>
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-wine-glass"></i>
+          <h1>Agnello</h1>
+        </a>
+        <div class="icons-container">
+          <a href="search.html" class="icon-link">
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+          </a>
+          <button class="icon-link">
+            <i class="fa-solid fa-bars icon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="main-container">
+        <h1 class="cart-title">Carrinho de Compras</h1>
+        
+        <!-- Empty Cart (default state) -->
+        <div class="empty-cart">
+          <i class="fa-solid fa-shopping-cart empty-cart-icon"></i>
+          <h2 class="empty-cart-title">Seu carrinho está vazio</h2>
+          <p class="empty-cart-text">Adicione alguns vinhos para começar</p>
+          <a href="index.html" class="explore-button">Explorar Vinhos</a>
+        </div>
+        
+        <!-- Cart with Items (hidden by default, would show with JavaScript in a real app) -->
+        <div style="display: none;">
+          <div class="cart-items">
+            <div class="cart-item">
+              <div class="cart-item-image">
+                <img src="/placeholder.svg" alt="Château Margaux Bordeaux">
+              </div>
+              <div class="cart-item-details">
+                <a href="product-1.html" class="cart-item-title">Château Margaux Bordeaux</a>
+                <p class="cart-item-type">Vinho Tinto</p>
+                <p class="cart-item-price">R$89,99</p>
+              </div>
+              <div class="cart-item-actions">
+                <button class="remove-button">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+                <div class="quantity-control">
+                  <button class="quantity-button">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <span class="quantity-value">1</span>
+                  <button class="quantity-button">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="cart-item">
+              <div class="cart-item-image">
+                <img src="/placeholder.svg" alt="Cloudy Bay Sauvignon Blanc">
+              </div>
+              <div class="cart-item-details">
+                <a href="product-2.html" class="cart-item-title">Cloudy Bay Sauvignon Blanc</a>
+                <p class="cart-item-type">Vinho Branco</p>
+                <p class="cart-item-price">R$34,99</p>
+              </div>
+              <div class="cart-item-actions">
+                <button class="remove-button">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+                <div class="quantity-control">
+                  <button class="quantity-button">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <span class="quantity-value">2</span>
+                  <button class="quantity-button">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cart-summary">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span>R$159,97</span>
+            </div>
+            <div class="summary-row">
+              <span>Frete</span>
+              <span>R$5,99</span>
+            </div>
+            <div class="summary-total">
+              <span class="summary-total-label">Total</span>
+              <span class="summary-total-value">R$165,96</span>
+            </div>
+          </div>
+          
+          <div>
+            <button class="checkout-button">
+              <i class="fa-solid fa-credit-card" style="margin-right: 4px;"></i>
+              Finalizar Compra
+            </button>
+            
+            <button class="clear-cart-button">
+              Limpar Carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <div class="nav-container">
+        <a href="index.html" class="nav-item">
+          <i class="fa-solid fa-house"></i>
+          <span>Início</span>
+        </a>
+        <a href="search.html" class="nav-item">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Buscar</span>
+        </a>
+        <a href="cart.html" class="nav-item active">
+          <i class="fa-solid fa-shopping-cart"></i>
+          <span>Carrinho</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>
