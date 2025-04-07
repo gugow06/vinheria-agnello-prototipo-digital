@@ -9,8 +9,27 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome para ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* CSS específico para controlar a exibição do carrinho baseado na URL */
+    #empty-cart { display: block; }
+    #cart-with-items { display: none; }
+    
+    /* Regras para mostrar o carrinho com itens quando a URL tem o parâmetro 'add' */
+    @supports selector(:has(html[class])) {
+      html:has(body.url-has-add) #empty-cart { display: none; }
+      html:has(body.url-has-add) #cart-with-items { display: block; }
+    }
+  </style>
 </head>
 <body>
+  <!-- Script para verificar URL e adicionar classe ao body -->
+  <script>
+    // Usando javascript inline mínimo apenas para detectar parâmetros na URL
+    if (window.location.search.includes('add=')) {
+      document.body.classList.add('url-has-add');
+    }
+  </script>
+
   <div class="mobile-container">
     <!-- Header/Navbar -->
     <header>
@@ -36,15 +55,15 @@
         <h1 class="cart-title">Carrinho de Compras</h1>
         
         <!-- Empty Cart (default state) -->
-        <div class="empty-cart">
+        <div class="empty-cart" id="empty-cart">
           <i class="fa-solid fa-shopping-cart empty-cart-icon"></i>
           <h2 class="empty-cart-title">Seu carrinho está vazio</h2>
           <p class="empty-cart-text">Adicione alguns vinhos para começar</p>
           <a href="index.html" class="explore-button">Explorar Vinhos</a>
         </div>
         
-        <!-- Cart with Items (hidden by default, would show with JavaScript in a real app) -->
-        <div style="display: none;">
+        <!-- Cart with Items (shown when URL has parameters) -->
+        <div id="cart-with-items">
           <div class="cart-items">
             <div class="cart-item">
               <div class="cart-item-image">
@@ -56,9 +75,9 @@
                 <p class="cart-item-price">R$89,99</p>
               </div>
               <div class="cart-item-actions">
-                <button class="remove-button">
+                <a href="cart.html" class="remove-button">
                   <i class="fa-solid fa-trash"></i>
-                </button>
+                </a>
                 <div class="quantity-control">
                   <button class="quantity-button">
                     <i class="fa-solid fa-minus"></i>
@@ -70,37 +89,12 @@
                 </div>
               </div>
             </div>
-            
-            <div class="cart-item">
-              <div class="cart-item-image">
-                <img src="/placeholder.svg" alt="Cloudy Bay Sauvignon Blanc">
-              </div>
-              <div class="cart-item-details">
-                <a href="product-2.html" class="cart-item-title">Cloudy Bay Sauvignon Blanc</a>
-                <p class="cart-item-type">Vinho Branco</p>
-                <p class="cart-item-price">R$34,99</p>
-              </div>
-              <div class="cart-item-actions">
-                <button class="remove-button">
-                  <i class="fa-solid fa-trash"></i>
-                </button>
-                <div class="quantity-control">
-                  <button class="quantity-button">
-                    <i class="fa-solid fa-minus"></i>
-                  </button>
-                  <span class="quantity-value">2</span>
-                  <button class="quantity-button">
-                    <i class="fa-solid fa-plus"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
           
           <div class="cart-summary">
             <div class="summary-row">
               <span>Subtotal</span>
-              <span>R$159,97</span>
+              <span>R$89,99</span>
             </div>
             <div class="summary-row">
               <span>Frete</span>
@@ -108,19 +102,19 @@
             </div>
             <div class="summary-total">
               <span class="summary-total-label">Total</span>
-              <span class="summary-total-value">R$165,96</span>
+              <span class="summary-total-value">R$95,98</span>
             </div>
           </div>
           
           <div>
-            <button class="checkout-button">
+            <a href="#" class="checkout-button">
               <i class="fa-solid fa-credit-card" style="margin-right: 4px;"></i>
               Finalizar Compra
-            </button>
+            </a>
             
-            <button class="clear-cart-button">
+            <a href="cart.html" class="clear-cart-button">
               Limpar Carrinho
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -144,5 +138,8 @@
       </div>
     </nav>
   </div>
+
+  <!-- Aviso: Esta implementação usa um mínimo de JavaScript inline -->
+  <!-- Em um ambiente real, seria necessário mais JavaScript para gerenciar o carrinho adequadamente -->
 </body>
 </html>
