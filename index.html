@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agnello - Vinheria</title>
-  <meta name="description" content="Descubra vinhos excepcionais de todo o mundo">
+  <title>Agnello - Vinhos Finos</title>
+  <meta name="description" content="Descubra vinhos finos selecionados para o seu paladar">
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome para ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Script do Lovable necessário para funcionalidades adicionais -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 </head>
 <body>
   <div class="mobile-container">
@@ -32,219 +34,94 @@
 
     <!-- Main Content -->
     <div class="content">
-      <!-- Hero Banner -->
-      <section class="hero-section">
-        <img src="/lovable-uploads/4b680abd-57bd-4b07-b5d6-4d9a9e8b0b63.png" alt="Banner de Vinhos" class="hero-image">
-        <div class="hero-overlay">
-          <div class="hero-content">
-            <h1 class="hero-title">Agnello</h1>
-            <p class="hero-subtitle">Descubra vinhos excepcionais de todo o mundo</p>
+      <div class="main-container">
+        <div class="banner">
+          <div class="banner-content">
+            <h2 class="banner-title">Descubra novos sabores</h2>
+            <p class="banner-text">Vinhos finos selecionados</p>
+            <a href="search.html" class="banner-button">Ver Catálogo</a>
           </div>
         </div>
-      </section>
-
-      <div class="main-container">
-        <!-- Wine Types -->
-        <section>
-          <h2 class="section-title">Explore Vinhos</h2>
-          <div class="wine-types-grid">
-            <a href="category-red.html" class="wine-type-card red-wine">
-              <i class="fa-solid fa-wine-bottle wine-type-icon"></i>
-              <span>Vinhos Tintos</span>
-            </a>
-            <a href="category-white.html" class="wine-type-card white-wine">
-              <i class="fa-solid fa-wine-glass-empty wine-type-icon"></i>
-              <span>Vinhos Brancos</span>
-            </a>
-            <a href="category-rose.html" class="wine-type-card rose-wine">
-              <i class="fa-solid fa-wine-glass wine-type-icon"></i>
-              <span>Vinhos Rosé</span>
-            </a>
-            <a href="category-champagne.html" class="wine-type-card champagne-wine">
-              <i class="fa-solid fa-champagne-glasses wine-type-icon"></i>
-              <span>Champagne</span>
-            </a>
-          </div>
-        </section>
-
-        <!-- Featured Wines -->
-        <section class="wine-section">
-          <div class="wine-section-header">
-            <h2 class="wine-section-title section-title">Vinhos em Destaque</h2>
-          </div>
-          <div class="wine-grid">
-            <a href="product-1.html" class="wine-card">
-              <div class="wine-card-image-container">
-                <img src="/placeholder.svg" alt="Château Margaux Bordeaux" class="wine-card-image">
-                <div class="wine-card-rating">4.8 ★</div>
-              </div>
-              <div class="wine-card-content">
-                <h3 class="wine-card-title">Château Margaux Bordeaux</h3>
-                <p class="wine-card-type">Vinho Tinto</p>
-                <div class="wine-card-footer">
-                  <span class="wine-card-price">R$89,99</span>
-                  <a href="cart.html?add=1" class="add-to-cart-button">
-                    <i class="fa-solid fa-plus"></i>
-                  </a>
-                </div>
+        
+        <div class="category-section">
+          <h2 class="section-title">Categorias</h2>
+          <div class="category-grid">
+            <a href="search.html" class="category-card bg-red-wine-gradient">
+              <div class="category-info">
+                <h3 class="category-title">Tintos</h3>
+                <p class="category-desc">Encorpados e elegantes</p>
               </div>
             </a>
-            <a href="product-2.html" class="wine-card">
-              <div class="wine-card-image-container">
-                <img src="/placeholder.svg" alt="Cloudy Bay Sauvignon Blanc" class="wine-card-image">
-                <div class="wine-card-rating">4.5 ★</div>
-              </div>
-              <div class="wine-card-content">
-                <h3 class="wine-card-title">Cloudy Bay Sauvignon Blanc</h3>
-                <p class="wine-card-type">Vinho Branco</p>
-                <div class="wine-card-footer">
-                  <span class="wine-card-price">R$34,99</span>
-                  <a href="cart.html?add=2" class="add-to-cart-button">
-                    <i class="fa-solid fa-plus"></i>
-                  </a>
-                </div>
+            <a href="search.html" class="category-card bg-white-wine-gradient">
+              <div class="category-info">
+                <h3 class="category-title">Brancos</h3>
+                <p class="category-desc">Frescos e aromáticos</p>
               </div>
             </a>
-            <a href="product-3.html" class="wine-card">
-              <div class="wine-card-image-container">
-                <img src="/placeholder.svg" alt="Antinori Tignanello" class="wine-card-image">
-                <div class="wine-card-rating">4.9 ★</div>
-              </div>
-              <div class="wine-card-content">
-                <h3 class="wine-card-title">Antinori Tignanello</h3>
-                <p class="wine-card-type">Vinho Tinto</p>
-                <div class="wine-card-footer">
-                  <span class="wine-card-price">R$124,99</span>
-                  <a href="cart.html?add=3" class="add-to-cart-button">
-                    <i class="fa-solid fa-plus"></i>
-                  </a>
-                </div>
+            <a href="search.html" class="category-card bg-rose-wine-gradient">
+              <div class="category-info">
+                <h3 class="category-title">Rosés</h3>
+                <p class="category-desc">Leves e frutados</p>
               </div>
             </a>
-            <a href="product-4.html" class="wine-card">
-              <div class="wine-card-image-container">
-                <img src="/placeholder.svg" alt="Veuve Clicquot Brut" class="wine-card-image">
-                <div class="wine-card-rating">4.7 ★</div>
-              </div>
-              <div class="wine-card-content">
-                <h3 class="wine-card-title">Veuve Clicquot Brut</h3>
-                <p class="wine-card-type">Champagne</p>
-                <div class="wine-card-footer">
-                  <span class="wine-card-price">R$59,99</span>
-                  <a href="cart.html?add=4" class="add-to-cart-button">
-                    <i class="fa-solid fa-plus"></i>
-                  </a>
-                </div>
+            <a href="search.html" class="category-card bg-champagne-gradient">
+              <div class="category-info">
+                <h3 class="category-title">Espumantes</h3>
+                <p class="category-desc">Borbulhantes e festivos</p>
               </div>
             </a>
           </div>
-        </section>
-
-        <!-- Red Wines -->
-        <section class="wine-section">
-          <div class="wine-section-header">
-            <h2 class="wine-section-title section-title">Vinhos Tintos</h2>
-          </div>
-          <div class="wine-grid">
-            <a href="product-1.html" class="wine-card">
-              <div class="wine-card-image-container">
-                <img src="/placeholder.svg" alt="Château Margaux Bordeaux" class="wine-card-image">
-                <div class="wine-card-rating">4.8 ★</div>
+        </div>
+        
+        <div class="featured-section">
+          <h2 class="section-title">Em Destaque</h2>
+          <div class="product-grid">
+            <a href="product-1.html" class="product-card">
+              <div class="product-image">
+                <img src="/placeholder.svg" alt="Château Margaux Bordeaux">
               </div>
-              <div class="wine-card-content">
-                <h3 class="wine-card-title">Château Margaux Bordeaux</h3>
-                <p class="wine-card-type">Vinho Tinto</p>
-                <div class="wine-card-footer">
-                  <span class="wine-card-price">R$89,99</span>
-                  <a href="cart.html?add=1" class="add-to-cart-button">
-                    <i class="fa-solid fa-plus"></i>
-                  </a>
-                </div>
+              <div class="product-info">
+                <h3 class="product-title">Château Margaux Bordeaux</h3>
+                <p class="product-type">Vinho Tinto</p>
+                <p class="product-price">R$89,99</p>
+                <div class="product-rating">4.8 ★</div>
               </div>
             </a>
-            <a href="product-3.html" class="wine-card">
-              <div class="wine-card-image-container">
-                <img src="/placeholder.svg" alt="Antinori Tignanello" class="wine-card-image">
-                <div class="wine-card-rating">4.9 ★</div>
+            <a href="product-1.html" class="product-card">
+              <div class="product-image">
+                <img src="/placeholder.svg" alt="Chardonnay Reserva">
               </div>
-              <div class="wine-card-content">
-                <h3 class="wine-card-title">Antinori Tignanello</h3>
-                <p class="wine-card-type">Vinho Tinto</p>
-                <div class="wine-card-footer">
-                  <span class="wine-card-price">R$124,99</span>
-                  <a href="cart.html?add=3" class="add-to-cart-button">
-                    <i class="fa-solid fa-plus"></i>
-                  </a>
-                </div>
+              <div class="product-info">
+                <h3 class="product-title">Chardonnay Reserva</h3>
+                <p class="product-type">Vinho Branco</p>
+                <p class="product-price">R$79,99</p>
+                <div class="product-rating">4.6 ★</div>
               </div>
             </a>
-          </div>
-        </section>
-
-        <!-- White Wines -->
-        <section class="wine-section">
-          <div class="wine-section-header">
-            <h2 class="wine-section-title section-title">Vinhos Brancos</h2>
-          </div>
-          <div class="wine-grid">
-            <a href="product-2.html" class="wine-card">
-              <div class="wine-card-image-container">
-                <img src="/placeholder.svg" alt="Cloudy Bay Sauvignon Blanc" class="wine-card-image">
-                <div class="wine-card-rating">4.5 ★</div>
+            <a href="product-1.html" class="product-card">
+              <div class="product-image">
+                <img src="/placeholder.svg" alt="Rosé Provence">
               </div>
-              <div class="wine-card-content">
-                <h3 class="wine-card-title">Cloudy Bay Sauvignon Blanc</h3>
-                <p class="wine-card-type">Vinho Branco</p>
-                <div class="wine-card-footer">
-                  <span class="wine-card-price">R$34,99</span>
-                  <a href="cart.html?add=2" class="add-to-cart-button">
-                    <i class="fa-solid fa-plus"></i>
-                  </a>
-                </div>
+              <div class="product-info">
+                <h3 class="product-title">Rosé Provence</h3>
+                <p class="product-type">Vinho Rosé</p>
+                <p class="product-price">R$69,99</p>
+                <div class="product-rating">4.7 ★</div>
+              </div>
+            </a>
+            <a href="product-1.html" class="product-card">
+              <div class="product-image">
+                <img src="/placeholder.svg" alt="Dom Pérignon Vintage">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Dom Pérignon Vintage</h3>
+                <p class="product-type">Champagne</p>
+                <p class="product-price">R$399,99</p>
+                <div class="product-rating">4.9 ★</div>
               </div>
             </a>
           </div>
-        </section>
-
-        <!-- Champagne Section -->
-        <section class="wine-section">
-          <div class="wine-section-header">
-            <h2 class="wine-section-title section-title">Champagne & Espumantes</h2>
-          </div>
-          <div class="wine-grid">
-            <a href="product-4.html" class="wine-card">
-              <div class="wine-card-image-container">
-                <img src="/placeholder.svg" alt="Veuve Clicquot Brut" class="wine-card-image">
-                <div class="wine-card-rating">4.7 ★</div>
-              </div>
-              <div class="wine-card-content">
-                <h3 class="wine-card-title">Veuve Clicquot Brut</h3>
-                <p class="wine-card-type">Champagne</p>
-                <div class="wine-card-footer">
-                  <span class="wine-card-price">R$59,99</span>
-                  <a href="cart.html?add=4" class="add-to-cart-button">
-                    <i class="fa-solid fa-plus"></i>
-                  </a>
-                </div>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section">
-          <h2 class="about-title">
-            <i class="fa-solid fa-wine-glass about-title-icon"></i>
-            Sobre a Agnello
-          </h2>
-          <p class="about-text">
-            A Agnello é uma vinícola tradicional dedicada à produção de vinhos excepcionais. 
-            Nossos vinhedos são cultivados com dedicação e conhecimento passado por gerações, 
-            resultando em vinhos de caráter único e sabor inconfundível. Desde o plantio das uvas 
-            até o engarrafamento, cada etapa é cuidadosamente supervisionada para garantir a 
-            mais alta qualidade em cada garrafa que produzimos.
-          </p>
-        </section>
+        </div>
       </div>
     </div>
 
